@@ -17,6 +17,7 @@ def translate_game_file(source_path, target_path):
 
   for data in data_array:
     data['Translation'] = cc.convert(data['Translation'])
+    data['Old Translation'] = cc.convert(data['Old Translation'])
 
 
   with open(target_path, 'w', newline='') as csvfile:
@@ -32,8 +33,8 @@ def translate_game_file(source_path, target_path):
       writer.writerow(newData)
 
 
-translate_game_file('./source_data/Schinese/CurrentLanguage/future.csv', './dist/Hantchinese/CurrentLanguage/future.csv')
-translate_game_file('./source_data/Schinese/CurrentLanguage/Game.csv', './dist/Hantchinese/CurrentLanguage/Game.csv')
-translate_game_file('./source_data/Schinese/CurrentLanguage/picard.csv', './dist/Hantchinese/CurrentLanguage/picard.csv')
-translate_game_file('./source_data/Schinese/CurrentLanguage/prunariu.csv', './dist/Hantchinese/CurrentLanguage/prunariu.csv')
-translate_game_file('./source_data/Schinese/CurrentLanguage/zubrin.csv', './dist/Hantchinese/CurrentLanguage/zubrin.csv')
+translate_game_file('./source_data/Schinese/CurrentLanguage/future.csv', './mod/Hantchinese/CurrentLanguage/future.csv')
+translate_game_file('./source_data/Schinese/CurrentLanguage/Game.csv', './mod/Hantchinese/CurrentLanguage/Game.csv')
+translate_game_file('./source_data/Schinese/CurrentLanguage/picard.csv', './mod/Hantchinese/CurrentLanguage/picard.csv')
+translate_game_file('./source_data/Schinese/CurrentLanguage/prunariu.csv', './mod/Hantchinese/CurrentLanguage/prunariu.csv')
+translate_game_file('./source_data/Schinese/CurrentLanguage/zubrin.csv', './mod/Hantchinese/CurrentLanguage/zubrin.csv')
